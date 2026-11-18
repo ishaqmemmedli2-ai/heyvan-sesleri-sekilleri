@@ -3,260 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heyvanlar Aləmi Ensiklopediyası</title>
+    <title>Heyvanlar Ensiklopediyası - 15 Heyvan</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e8f0f2;
-            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             margin: 0;
             padding: 20px;
+            color: #333;
         }
-        header {
+        h1 {
             text-align: center;
-            background: linear-gradient(135deg, #1b5e20, #388e3c);
-            color: white;
-            padding: 35px 20px;
-            border-radius: 12px;
-            margin-bottom: 35px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.3em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
-        .container {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 25px;
-            max-width: 1300px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         .card {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border-top: 6px solid #2e7d32;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .card img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px;
+        }
+        .card h3 {
+            margin: 12px 0 8px 0;
+            color: #2c3e50;
+            font-size: 1.3em;
+        }
+        .info {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.4;
             margin-bottom: 15px;
+            padding: 0 5px;
         }
-        .card h2 {
-            margin-top: 0;
-            color: #1b5e20;
-            border-bottom: 2px solid #e8f5e9;
-            padding-bottom: 10px;
-        }
-        .info-list {
-            list-style: none;
-            padding: 12px;
-            margin: 15px 0;
-            background-color: #f9fbf9;
-            border-radius: 8px;
-            font-size: 14px;
-        }
-        .btn-group {
+        .btn-container {
             display: flex;
+            justify-content: center;
             gap: 10px;
-            margin-top: 10px;
+            margin-top: auto;
         }
-        .sound-btn {
-            background-color: #d84315;
-            color: white;
+        button {
+            padding: 8px 15px;
             border: none;
-            padding: 10px 16px;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 15px;
             font-weight: bold;
+            color: white;
+            transition: opacity 0.2s;
         }
-        .sound-btn:hover {
-            background-color: #bf360c;
+        button:hover {
+            opacity: 0.85;
+        }
+        .play-btn {
+            background-color: #2ecc71;
         }
         .stop-btn {
-            background-color: #455a64;
-            color: white;
-            border: none;
-            padding: 10px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: bold;
-        }
-        .stop-btn:hover {
-            background-color: #263238;
+            background-color: #e74c3c;
         }
         .no-sound {
-            font-size: 18px;
+            color: #e67e22;
             font-weight: bold;
-            color: #c62828;
-            background-color: #ffebee;
-            padding: 10px 14px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-top: 10px;
-            letter-spacing: 1px;
+            margin-top: auto;
+            padding: 8px 0;
+            font-size: 0.95em;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>🐾 Heyvanlar Aləmi Ensiklopediyası</h1>
-        <p>Təbiətin möhtəşəm canlıları</p>
-    </header>
+    <h1>🌍 Heyvanlar Ensiklopediyası (15 Heyvan)</h1>
 
-    <div class="container">
-        
-        <!-- 1. sir -->
+    <div class="grid">
+        <!-- 1. Aslan -->
         <div class="card">
-            <img src="sir.jpg" alt="sir">
-            <h2>1. sir</h2>
-            <ul class="info-list">
-                <li><strong>Yaşayış yeri:</strong> Afrika savannaları və Hindistan</li>
-                <li><strong>Çəkisi:</strong> Erkəklər 190-250 kq</li>
-            </ul>
-            <p>Şirlər pişikkimilər fəsiləsinin sosial qruplar ("prayd") halında yaşayan yeganə nümayəndələridir. Erkək şirin nəriltisi 8 kilometr uzaqdan eşidilə bilər.</p>
-            <div class="btn-group">
-                <button class="sound-btn" onclick="sesiBaslat('sirSesi')">Dinlə 🦁🔊</button>
-                <button class="stop-btn" onclick="sesiDayandir('sirSesi')">Dayandır ⏹️</button>
+            <div>
+                <img src="sir.jpg" alt="Aslan">
+                <h3>Aslan</h3>
+                <p class="info">"Heyvanların şahı" adlanan aslanlar sürü halında (prayd) yaşayan yeganə pişikkimilərdir. Nəriltisi 8 km uzaqdan eşidilə bilir.</p>
             </div>
-            <audio id="sirSesi" src="sir.mp3" preload="auto"></audio>
+            <audio id="audio1" src="sir.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio1'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio1'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
         </div>
 
-        <!-- 2. fil -->
+        <!-- 2. Fil -->
         <div class="card">
-            <img src="fil.jpg" alt="fil">
-            <h2>2. fil</h2>
-            <ul class="info-list">
-                <li><strong>Yaşayış yeri:</strong> Afrika savannaları və meşələri</li>
-            </ul>
-            <p>Afrika fili yer üzündə yaşayan ən böyük quru heyvanıdır. Xortumlarında 40 mindən çox əzələ var.</p>
-            <div class="btn-group">
-                <button class="sound-btn" onclick="sesiBaslat('filSesi')">Dinlə 🐘🔊</button>
-                <button class="stop-btn" onclick="sesiDayandir('filSesi')">Dayandır ⏹️</button>
+            <div>
+                <img src="fil.jpg" alt="Fil">
+                <h3>Fil</h3>
+                <p class="info">Quruda yaşayan ən böyük məməlidir. Çox güclü yaddaşa malikdirlər və xortumlarında 40 mindən çox əzələ var.</p>
             </div>
-            <audio id="filSesi" src="fil.mp3" preload="auto"></audio>
+            <audio id="audio2" src="fil.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio2'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio2'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
         </div>
 
-        <!-- 3. gepard -->
+        <!-- 3. Gepard -->
         <div class="card">
-            <img src="gepard.jpg" alt="gepard">
-            <h2>3. gepard</h2>
-            <ul class="info-list">
-                <li><strong>Maksimal sürət:</strong> Saatda 110-120 km</li>
-            </ul>
-            <p>Gepard quruda yaşayan ən sürətli canlıdır. Cəmi 3 saniyədə 100 km/saat sürətə çatır.</p>
-            <div class="btn-group">
-                <button class="sound-btn" onclick="sesiBaslat('gepardSesi')">Dinlə 🐆🔊</button>
-                <button class="stop-btn" onclick="sesiDayandir('gepardSesi')">Dayandır ⏹️</button>
+            <div>
+                <img src="gepard.jpg" alt="Gepard">
+                <h3>Gepard</h3>
+                <p class="info">Dünyanın ən sürətli quru heyvanıdır. Cəmi 3 saniyə ərzində saatda 100-110 km sürət yığa bilir.</p>
             </div>
-            <audio id="gepardSesi" src="gepard.mp3" preload="auto"></audio>
+            <audio id="audio3" src="gepard.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio3'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio3'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
         </div>
 
-        <!-- 4. delfin (1) -->
+        <!-- 4. Delfin -->
         <div class="card">
-            <img src="delfin (1).jpg" alt="delfin (1)">
-            <h2>4. delfin (1)</h2>
-            <ul class="info-list">
-                <li><strong>Yaşayış yeri:</strong> Dünya okeanı</li>
-            </ul>
-            <p>Exolokasiya (səs dalğaları) vasitəsilə ünsiyyət qururlar və yatarkən beyinlərinin yalnız yarısını söndürürlər.</p>
-            <div class="btn-group">
-                <button class="sound-btn" onclick="sesiBaslat('delfinSesi')">Dinlə 🐬🔊</button>
-                <button class="stop-btn" onclick="sesiDayandir('delfinSesi')">Dayandır ⏹️</button>
+            <div>
+                <img src="delfin (1).jpg" alt="Delfin">
+                <h3>Delfin</h3>
+                <p class="info">Ən ağıllı dəniz məməlilərindən biridir. Bir-birləri ilə xüsusi fit və klik səsləri vasitəsilə ünsiyyət qururlar.</p>
             </div>
-            <audio id="delfinSesi" src="delfin.mp3" preload="auto"></audio>
+            <audio id="audio4" src="delfin.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio4'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio4'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
         </div>
 
         <!-- 5. Zürafə -->
         <div class="card">
-            <img src="Zurafə.jpg" alt="Zürafə">
-            <h2>5. Zürafə</h2>
-            <ul class="info-list">
-                <li><strong>Boyu:</strong> 4.5 - 6 metr</li>
-            </ul>
-            <p>Planetin ən hündür heyvanıdır. Boyun fəqərələrinin sayı insanlardakı kimi cəmi 7 ədəddir.</p>
-            <div class="no-sound">SƏSİ YOXDUR 🔇</div>
+            <div>
+                <img src="zurafə.jpg" alt="Zürafə">
+                <h3>Zürafə</h3>
+                <p class="info">Dünyanın ən hündür heyvanıdır, boyu 5.5 metrə çatır. Dili tünd göy rəngdədir və uzunluğu 45-50 sm olur.</p>
+            </div>
+            <div class="no-sound">🔇 SƏSİ YOXDUR</div>
         </div>
 
-        <!-- 6. Pinqvin -->
+        <!-- 6. Pingvin -->
         <div class="card">
-            <img src="pingvin.jpg" alt="Pinqvin">
-            <h2>6. Pinqvin</h2>
-            <ul class="info-list">
-                <li><strong>Yaşayış yeri:</strong> Antarktida</li>
-            </ul>
-            <p>Suda saatda 35 kilometr sürətlə üzə bilirlər və su altında 20 dəqiqədən çox nəfəs almadan qalırlar.</p>
-            <div class="btn-group">
-                <button class="sound-btn" onclick="sesiBaslat('pingvinSesi')">Dinlə 🐧🔊</button>
-                <button class="stop-btn" onclick="sesiDayandir('pingvinSesi')">Dayandır ⏹️</button>
+            <div>
+                <img src="pingvin.jpg" alt="Pingvin">
+                <h3>Pingvin</h3>
+                <p class="info">Uça bilməyən, lakin suyun altında saatda 35 km sürətlə əla üzən dəniz quşlarıdır. Əsasən Cənub yarımkürəsində yaşayırlar.</p>
             </div>
-            <audio id="pingvinSesi" src="pingvin.mp3" preload="auto"></audio>
+            <audio id="audio6" src="pingvin.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio6'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio6'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
         </div>
 
         <!-- 7. Qartal -->
         <div class="card">
-            <img src="qartal.jpg" alt="Qartal">
-            <h2>7. Qartal</h2>
-            <ul class="info-list">
-                <li><strong>Qanad açıqlığı:</strong> 2 metrə qədər</li>
-            </ul>
-            <p>Görmə itiliyi insanınkından 4-5 dəfə güclüdür. 3 kilometr hündürlükdən yerdəki kiçik ovu görə bilirlər.</p>
-            <div class="btn-group">
-                <button class="sound-btn" onclick="sesiBaslat('qartalSesi')">Dinlə 🦅🔊</button>
-                <button class="stop-btn" onclick="sesiDayandir('qartalSesi')">Dayandır ⏹️</button>
+            <div>
+                <img src="qartal.jpg" alt="Qartal">
+                <h3>Qartal</h3>
+                <p class="info">Çox iti görmə qabiliyyətinə malik yırtıcı quşdur. 3 kilometr uzaqlıqdan kiçik bir ovunu rahatlıqla görə bilir.</p>
             </div>
-            <audio id="qartalSesi" src="qartal.mp3" preload="auto"></audio>
+            <audio id="audio7" src="qartal.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio7'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio7'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
         </div>
 
         <!-- 8. Koala -->
         <div class="card">
-            <img src="koala.jpg" alt="Koala">
-            <h2>8. Koala</h2>
-            <ul class="info-list">
-                <li><strong>Yuxu müddəti:</strong> Gündə 18-22 saat</li>
-            </ul>
-            <p>Barmaq izləri insan barmaq izlərinə o qədər bənzəyir ki, hətta mikroskop altında belə ayırd etmək çətindir.</p>
-            <div class="btn-group">
-                <button class="sound-btn" onclick="sesiBaslat('koalaSesi')">Dinlə 🐨🔊</button>
-                <button class="stop-btn" onclick="sesiDayandir('koalaSesi')">Dayandır ⏹️</button>
+            <div>
+                <img src="koala.jpg" alt="Koala">
+                <h3>Koala</h3>
+                <p class="info">Avstraliyada yaşayan kisəli heyvandır. Günün 18-20 saatını ağac budaqlarında yatır və yalnız evkalipt yarpaqları yeyir.</p>
             </div>
-            <audio id="koalaSesi" src="koala.mp3" preload="auto"></audio>
+            <audio id="audio8" src="koala.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio8'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio8'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
         </div>
 
         <!-- 9. Balina -->
         <div class="card">
-            <img src="balina.jpg" alt="Balina">
-            <h2>9. Balina</h2>
-            <ul class="info-list">
-                <li><strong>Çəkisi:</strong> 150 - 180 ton</li>
-            </ul>
-            <p>Yer üzündə indiyə qədər yaşamış ən nəhəng canlıdır. Ürəyi kiçik bir avtomobil ölçüsündədir.</p>
-            <div class="no-sound">SƏSİ YOXDUR 🔇</div>
+            <div>
+                <img src="balina.jpg" alt="Balina">
+                <h3>Balina</h3>
+                <p class="info">Yer üzündə yaşamış ən nəhəng canlıdır. Göy balinanın ürəyi kiçik bir avtomobil böyüklüyündə ola bilir.</p>
+            </div>
+            <div class="no-sound">🔇 SƏSİ YOXDUR</div>
         </div>
 
+        <!-- 10. Pələng -->
+        <div class="card">
+            <div>
+                <img src="peleng.jpg" alt="Pələng">
+                <h3>Pələng</h3>
+                <p class="info">Pişikkimilər fəsiləsinin ən iri nümayəndəsidir. Hər bir pələngin bədənindəki zolaqlar insanın barmaq izi kimi bənzərsizdir.</p>
+            </div>
+            <audio id="audio10" src="peleng.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio10'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio10'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
+        </div>
+
+        <!-- 11. Ayı -->
+        <div class="card">
+            <div>
+                <img src="ayi.jpg" alt="Ayı">
+                <h3>Ayı</h3>
+                <p class="info">Çox güclü qoxubilmə qabiliyyətinə malik iri məməlidir. Qış aylarında mağaralarda uzun müddət qış yuxusuna gedirlər.</p>
+            </div>
+            <audio id="audio11" src="ayi.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio11'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio11'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
+        </div>
+
+        <!-- 12. Canavar -->
+        <div class="card">
+            <div>
+                <img src="canavar.jpg" alt="Canavar">
+                <h3>Canavar</h3>
+                <p class="info">Ağıllı və dözümlü yırtıcılardır. Sürü halında ov edirlər və ulamaqla digər sürülərə öz ərazilərini bildirirlər.</p>
+            </div>
+            <audio id="audio12" src="canavar.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio12'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio12'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
+        </div>
+
+        <!-- 13. Pişik -->
+        <div class="card">
+            <div>
+                <img src="pisik.jpg" alt="Pişik">
+                <h3>Pişik</h3>
+                <p class="info">Çevik və sevimli ev heyvanıdır. Qaranlıqda insanlardan 6 dəfə daha yaxşı görür və günün böyük hissəsini yatır.</p>
+            </div>
+            <audio id="audio13" src="pisik.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio13'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio13'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
+        </div>
+
+        <!-- 14. İt -->
+        <div class="card">
+            <div>
+                <img src="it.jpg" alt="İt">
+                <h3>İt</h3>
+                <p class="info">İnsanın ən sadiq dostu hesab olunur. Qoxubilmə qabiliyyəti insanınkından on minlərlə dəfə daha güclüdür.</p>
+            </div>
+            <audio id="audio14" src="it.mp3"></audio>
+            <div class="btn-container">
+                <button class="play-btn" onclick="let a=document.getElementById('audio14'); a.currentTime=0; a.play();">Səsi Çal</button>
+                <button class="stop-btn" onclick="let a=document.getElementById('audio14'); a.pause(); a.currentTime=0;">Dayandır</button>
+            </div>
+        </div>
+
+        <!-- 15. Dovşan -->
+        <div class="card">
+            <div>
+                <img src="dovsan.jpg" alt="Dovşan">
+                <h3>Dovşan</h3>
+                <p class="info">Uzun qulaqları sayəsində ən zəif səsləri belə eşidir. Ön dişləri bütün ömrü boyu dayanmadan uzanır.</p>
+            </div>
+            <div class="no-sound">🔇 SƏSİ YOXDUR</div>
+        </div>
     </div>
-
-    <script>
-        function sesiBaslat(id) {
-            document.querySelectorAll('audio').forEach(audio => {
-                audio.pause();
-                audio.currentTime = 0;
-            });
-
-            const ses = document.getElementById(id);
-            ses.play().catch(xeta => {
-                alert("Səs faylı açılmadı! Yoxlayın ki, '" + ses.getAttribute('src') + "' faylı bu HTML faylı ilə eyni yerdədir və formatı .mp3-dür.");
-            });
-        }
-
-        function sesiDayandir(id) {
-            const ses = document.getElementById(id);
-            ses.pause();
-            ses.currentTime = 0;
-        }
-    </script>
 
 </body>
 </html>
